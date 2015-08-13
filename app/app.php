@@ -19,14 +19,14 @@
     //Setting Home page
     $app->get("/", function() use ($app) {
 
-        return $app['twig']->render('submit.html.twig',array('result', '0'));
+        return $app['twig']->render('submit.html.twig',array('result'=> " "));
     });
 
     //Retrieving user input, setting instance, using ScrabbleValues method, then posting result.
     $app->get("/view_result", function() use ($app) {
         $scrabble_input = new ScrabbleValues;
         $scrabble_value = $scrabble_input->getValues($_GET['scrabble_word']);
-        return $app['twig']->render('result.html.twig', array('result' => $scrabble_value);
+        return $app['twig']->render('submit.html.twig', array('result' => $scrabble_value));
     });
 
 
