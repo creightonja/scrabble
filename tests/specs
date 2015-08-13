@@ -1,0 +1,14 @@
+array('A'=>1, )
+
+
+Specs
+
+//Testing for value of A.  Input = 'A', Output = 1.
+//Testing for value of D.
+//Testing for value of B.
+//Testing for value of F.
+//Testing for value of J.
+//Testing for value of Q.
+//Testing for value of APE.
+//Testing for value of ADBFKJQ.
+//Testing for value of lowercase.
