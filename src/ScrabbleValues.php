@@ -34,8 +34,18 @@
                 'z' => 10
             ); //end array
 
-            $output = $value_array[strtolower($input)];
-        //    var_dump($scrabble_value);
+            //Checking for valid alpha combination.
+            if (ctype_alpha($input) != true){
+                return $output = "Not a scrabble word.";
+            }
+
+            $output = 0;
+            $split_string = str_split($input);  //Creating an array from the input word
+            foreach($split_string as $letter){
+                $letter_value = $value_array[strtolower($letter)]; //Convert letter to lower and searches value array
+                $output += $letter_value;
+            }
+
         return $output;
 
 
